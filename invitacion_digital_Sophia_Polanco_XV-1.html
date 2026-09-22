@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#ead0d0">
+<title>Sophia Polanco — XV Años</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap');
+
+  :root{
+    --ivory:#fbf8f3;
+    --ink:#252223;
+    --rose:#d9aeb2;
+    --rose2:#eedbdd;
+    --line:#ded4ce;
+    --gold:#b59a6a;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;background:var(--ivory);color:var(--ink);
+    font-family:"DM Sans",Arial,sans-serif;
+    overflow-x:hidden;
+  }
+  body:before{
+    content:"";position:fixed;inset:0;pointer-events:none;opacity:.18;
+    background-image:radial-gradient(#b9aca4 .55px,transparent .55px);
+    background-size:5px 5px;z-index:10;
+  }
+  .page{max-width:720px;margin:auto;background:var(--ivory);min-height:100vh}
+  section{padding:68px 28px;position:relative}
+  .hero{
+    min-height:100vh;display:flex;flex-direction:column;justify-content:center;
+    text-align:center;overflow:hidden;padding:30px 24px;
+  }
+  .eyebrow{font-size:11px;letter-spacing:4px;text-transform:uppercase;margin-bottom:22px;opacity:.7}
+  h1{
+    font-family:"Playfair Display",serif;font-size:clamp(50px,15vw,94px);
+    line-height:.9;font-weight:500;margin:0 0 14px;
+  }
+  .xv{
+    font-family:"Playfair Display",serif;font-size:23px;letter-spacing:7px;
+    margin:0 0 20px;font-style:italic;
+  }
+  .date{font-size:14px;letter-spacing:3px;text-transform:uppercase}
+  .hero-note{margin-top:30px;font-family:"Playfair Display",serif;font-style:italic;font-size:18px}
+  .bow{
+    position:absolute;left:-55px;top:7%;width:230px;height:260px;
+    transform:rotate(-12deg);filter:drop-shadow(0 18px 18px rgba(80,40,45,.12));
+    animation:float 5s ease-in-out infinite;
+  }
+  .bow .loop{
+    position:absolute;width:125px;height:88px;background:linear-gradient(135deg,#efcfd2,#c98f97 55%,#e8c1c5);
+    border-radius:75% 25% 75% 25%;box-shadow:inset -10px -9px 18px rgba(103,53,60,.12);
+  }
+  .bow .l{left:5px;top:28px;transform:rotate(22deg)}
+  .bow .r{left:93px;top:16px;transform:rotate(-34deg) scaleX(-1)}
+  .bow .knot{
+    position:absolute;left:79px;top:70px;width:62px;height:58px;border-radius:48% 52% 45% 55%;
+    background:linear-gradient(135deg,#f3d7da,#c68d96);z-index:3;
+  }
+  .bow .tail{
+    position:absolute;left:83px;top:112px;width:62px;height:150px;
+    background:linear-gradient(110deg,#eac6ca,#c88f97 52%,#edd0d2);
+    clip-path:polygon(22% 0,88% 0,100% 100%,54% 87%,0 100%);
+    transform:rotate(10deg);z-index:2;
+  }
+  .bow .tail2{
+    position:absolute;left:43px;top:110px;width:65px;height:135px;
+    background:linear-gradient(110deg,#e8c0c5,#bd818b 60%,#edced0);
+    clip-path:polygon(12% 0,90% 0,100% 100%,47% 86%,0 100%);
+    transform:rotate(-19deg);z-index:1;
+  }
+  .scroll{margin-top:20px;font-size:20px;animation:bounce 2s infinite;opacity:.55}
+  .intro{text-align:center}
+  .smallcap{font-size:10px;letter-spacing:3px;text-transform:uppercase;opacity:.55;margin-bottom:18px}
+  .script{
+    font-family:"Playfair Display",serif;font-size:31px;font-style:italic;font-weight:500;
+    line-height:1.35;margin:0 auto 18px;max-width:520px;
+  }
+  .copy{font-size:15px;line-height:1.8;max-width:520px;margin:auto;color:#514a47}
+  .divider{width:70px;height:1px;background:var(--rose);margin:28px auto}
+  .cards{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:30px}
+  .card{border:1px solid var(--line);padding:24px 12px;text-align:center;background:rgba(255,255,255,.35)}
+  .card .label{font-size:9px;letter-spacing:2px;text-transform:uppercase;opacity:.55}
+  .card .value{font-family:"Playfair Display",serif;font-size:25px;margin-top:8px}
+  .venue{text-align:center}
+  .venue-name{font-family:"Playfair Display",serif;font-size:31px;margin:12px 0 8px}
+  .address{font-size:14px;line-height:1.6;color:#5a5350}
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:8px;
+    margin-top:22px;padding:13px 22px;border:1px solid #bfa9a2;
+    color:var(--ink);text-decoration:none;font-size:12px;letter-spacing:1.2px;
+    text-transform:uppercase;background:transparent;transition:.25s;
+  }
+  .btn:hover{background:var(--rose2);transform:translateY(-2px)}
+  .count{text-align:center}
+  .count-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:30px}
+  .count-box{padding:18px 4px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .num{font-family:"Playfair Display",serif;font-size:30px}
+  .unit{font-size:8px;letter-spacing:2px;text-transform:uppercase;opacity:.55}
+  .rsvp{text-align:center;background:#f3e3e4}
+  .rsvp .btn{border-color:#a9868a;background:#fff7f7}
+  .note{font-size:12px;opacity:.55;margin-top:14px;line-height:1.6}
+  footer{text-align:center;padding:28px 20px 50px;font-family:"Playfair Display",serif;font-style:italic;opacity:.55}
+  .music{
+    position:fixed;right:18px;bottom:18px;width:46px;height:46px;border-radius:50%;
+    border:1px solid #c4aba8;background:rgba(251,248,243,.9);z-index:20;cursor:pointer;
+    font-size:17px;box-shadow:0 6px 20px rgba(0,0,0,.08)
+  }
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .8s ease,transform .8s ease}
+  .reveal.visible{opacity:1;transform:none}
+  @keyframes float{0%,100%{transform:rotate(-12deg) translateY(0)}50%{transform:rotate(-9deg) translateY(10px)}}
+  @keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(7px)}}
+  @media(max-width:520px){
+    section{padding:58px 22px}
+    .bow{transform:scale(.82) rotate(-12deg);left:-72px;top:3%}
+    .count-grid{gap:4px}
+    .num{font-size:25px}
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <section class="hero">
+    <div class="bow" aria-hidden="true">
+      <div class="loop l"></div><div class="loop r"></div>
+      <div class="knot"></div><div class="tail"></div><div class="tail2"></div>
+    </div>
+    <div class="eyebrow">Una noche para recordar</div>
+    <h1>Sophia<br>Polanco</h1>
+    <div class="xv">XV Años</div>
+    <div class="date">Domingo · 04 · Octubre · 2026</div>
+    <div class="hero-note">Nos vemos para celebrar.</div>
+    <div class="scroll">⌄</div>
+  </section>
+
+  <section class="intro reveal">
+    <div class="smallcap">Con mucho cariño</div>
+    <p class="script">Hay momentos que se guardan para siempre...</p>
+    <p class="copy">Y esta noche quiero compartir uno de los más especiales contigo. Acompáñame a celebrar mis XV años y a hacer de esta fecha un recuerdo inolvidable.</p>
+    <div class="divider"></div>
+    <p class="script" style="font-size:24px">Será un placer tenerte conmigo.</p>
+  </section>
+
+  <section class="reveal">
+    <div class="smallcap" style="text-align:center">La celebración</div>
+    <div class="cards">
+      <div class="card"><div class="label">Fecha</div><div class="value">04<br>Octubre</div></div>
+      <div class="card"><div class="label">Hora</div><div class="value">7:00 PM</div></div>
+    </div>
+  </section>
+
+  <section class="venue reveal">
+    <div class="smallcap">Lugar</div>
+    <div class="venue-name">Ribogarden</div>
+    <div class="address">Eje vial Juan Gabriel #2008</div>
+    <a class="btn" target="_blank" rel="noopener"
+       href="https://www.google.com/maps/search/?api=1&query=Ribogarden%2C%20Eje%20vial%20Juan%20Gabriel%20%232008">
+       Ver ubicación
+    </a>
+  </section>
+
+  <section class="count reveal">
+    <div class="smallcap">Falta muy poco</div>
+    <p class="script">Cuenta regresiva</p>
+    <div class="count-grid">
+      <div class="count-box"><div class="num" id="days">--</div><div class="unit">Días</div></div>
+      <div class="count-box"><div class="num" id="hours">--</div><div class="unit">Horas</div></div>
+      <div class="count-box"><div class="num" id="mins">--</div><div class="unit">Min</div></div>
+      <div class="count-box"><div class="num" id="secs">--</div><div class="unit">Seg</div></div>
+    </div>
+  </section>
+
+  <section class="rsvp reveal">
+    <div class="smallcap">Confirma tu asistencia</div>
+    <p class="script" style="font-size:27px">¡Te espero!</p>
+    <p class="copy">Aquí puedes colocar el número de WhatsApp para que tus invitados confirmen directamente.</p>
+    <a class="btn" href="#" onclick="alert('Agrega el número de WhatsApp de confirmaciones en el archivo para activar este botón.');return false;">Confirmar asistencia</a>
+    <div class="note">El botón queda listo para conectarlo al WhatsApp que nos indiques.</div>
+  </section>
+
+  <footer>Sophia Polanco · XV Años · 2026</footer>
+</div>
+
+<button class="music" id="musicBtn" aria-label="Música">♫</button>
+
+<script>
+  // Cuenta regresiva: 4 de octubre de 2026, 7:00 PM (hora local del dispositivo)
+  const target = new Date(2026, 9, 4, 19, 0, 0);
+  function updateCountdown(){
+    const diff = target - new Date();
+    const d=document.getElementById('days'),h=document.getElementById('hours'),
+          m=document.getElementById('mins'),s=document.getElementById('secs');
+    if(diff<=0){ d.textContent=h.textContent=m.textContent='00'; s.textContent='00'; return; }
+    d.textContent=String(Math.floor(diff/86400000)).padStart(2,'0');
+    h.textContent=String(Math.floor(diff/3600000)%24).padStart(2,'0');
+    m.textContent=String(Math.floor(diff/60000)%60).padStart(2,'0');
+    s.textContent=String(Math.floor(diff/1000)%60).padStart(2,'0');
+  }
+  updateCountdown(); setInterval(updateCountdown,1000);
+
+  const observer=new IntersectionObserver(entries=>{
+    entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')});
+  },{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+
+  // Música: se puede activar sustituyendo "musica.mp3" por un archivo de audio.
+  const audio=new Audio();
+  audio.loop=true;
+  let playing=false;
+  document.getElementById('musicBtn').addEventListener('click',()=>{
+    if(!audio.src){
+      alert('La invitación ya tiene el botón de música. Cuando elijas la canción, se puede enlazar aquí.');
+      return;
+    }
+    if(playing){audio.pause(); playing=false; document.getElementById('musicBtn').textContent='♫';}
+    else{audio.play(); playing=true; document.getElementById('musicBtn').textContent='Ⅱ';}
+  });
+</script>
+</body>
+</html>
