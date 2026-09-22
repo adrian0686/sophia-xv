@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#ead0d0">
+<title>Sophia Polanco — XV Años</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Great+Vibes&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap');
+  :root{--ivory:#fbf8f3;--ink:#252223;--rose:#d8a4aa;--rose2:#eedbdd;--line:#ded4ce}
+  *{box-sizing:border-box} html{scroll-behavior:smooth}
+  body{margin:0;background:var(--ivory);color:var(--ink);font-family:"DM Sans",Arial,sans-serif;overflow-x:hidden}
+  body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.16;background-image:radial-gradient(#b9aca4 .55px,transparent .55px);background-size:5px 5px;z-index:10}
+  .page{max-width:720px;margin:auto;background:var(--ivory);min-height:100vh}
+  section{padding:68px 28px;position:relative}
+  .hero{min-height:100vh;display:flex;position:relative;flex-direction:column;justify-content:center;text-align:center;overflow:hidden;padding:30px 24px}
+  .eyebrow{font-size:11px;letter-spacing:4px;text-transform:uppercase;margin-bottom:18px;opacity:.7}
+  h1{font-family:"Great Vibes",cursive;z-index:5;font-size:clamp(72px,20vw,132px);line-height:.78;font-weight:400;margin:0 0 24px;position:relative;z-index:4;letter-spacing:-1px}
+  h1 span{display:block}
+  .xv{position:relative;z-index:5;font-family:"Playfair Display",serif;font-size:23px;letter-spacing:7px;margin:0 0 20px;font-style:italic}
+  .date{position:relative;z-index:5;font-size:14px;letter-spacing:3px;text-transform:uppercase}
+  .hero-note{position:relative;z-index:5;margin-top:30px;font-family:"Great Vibes",cursive;font-size:27px}
+
+  /* Moño satinado grande, inspirado en la invitación de referencia */
+  .bow-art{position:absolute;left:-82px;top:3%;width:235px;height:400px;z-index:1;animation:bowFloat 5.5s ease-in-out infinite;filter:drop-shadow(0 18px 18px rgba(92,45,53,.13))}
+  .bow-art svg{width:100%;height:100%;overflow:visible}
+  .ribbon{fill:url(#silk);stroke:rgba(164,91,102,.13);stroke-width:1.2}
+  .ribbon-dark{fill:url(#silkDark)}
+  .shine{fill:url(#shine);opacity:.65}
+  .knot{fill:url(#knot);stroke:rgba(130,67,76,.15);stroke-width:1}
+  @keyframes bowFloat{0%,100%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(7px) rotate(0deg)}}
+
+  .scroll{margin-top:20px;font-size:20px;animation:bounce 2s infinite;opacity:.55;position:relative;z-index:4}
+  .intro{text-align:center}.smallcap{font-size:10px;letter-spacing:3px;text-transform:uppercase;opacity:.55;margin-bottom:18px}
+  .script{font-family:"Great Vibes",cursive;font-size:38px;line-height:1.25;margin:0 auto 18px;max-width:520px;font-weight:400}
+  .copy{font-size:15px;line-height:1.8;max-width:520px;margin:auto;color:#514a47}
+  .divider{width:70px;height:1px;background:var(--rose);margin:28px auto}
+  .cards{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:30px}.card{border:1px solid var(--line);padding:24px 12px;text-align:center;background:rgba(255,255,255,.35)}
+  .card .label{font-size:9px;letter-spacing:2px;text-transform:uppercase;opacity:.55}.card .value{font-family:"Playfair Display",serif;font-size:25px;margin-top:8px}
+  .venue{text-align:center}.venue-name{font-family:"Playfair Display",serif;font-size:31px;margin:12px 0 8px}.address{font-size:14px;line-height:1.6;color:#5a5350}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;margin-top:22px;padding:13px 22px;border:1px solid #bfa9a2;color:var(--ink);text-decoration:none;font-size:12px;letter-spacing:1.2px;text-transform:uppercase;background:transparent;transition:.25s}.btn:hover{background:var(--rose2);transform:translateY(-2px)}
+  .count{text-align:center}.count-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:30px}.count-box{padding:18px 4px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .num{font-family:"Playfair Display",serif;font-size:30px}.unit{font-size:8px;letter-spacing:2px;text-transform:uppercase;opacity:.55}
+  .gift{text-align:center}.gift .script{margin-bottom:10px}.rsvp{text-align:center;background:#f3e3e4}.rsvp .btn{border-color:#a9868a;background:#fff7f7}.note{font-size:12px;opacity:.55;margin-top:14px;line-height:1.6}
+  footer{text-align:center;padding:28px 20px 50px;font-family:"Great Vibes",cursive;font-size:25px;opacity:.65}
+  .music{position:fixed;right:18px;bottom:18px;width:46px;height:46px;border-radius:50%;border:1px solid #c4aba8;background:rgba(251,248,243,.9);z-index:20;cursor:pointer;font-size:17px;box-shadow:0 6px 20px rgba(0,0,0,.08)}
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .8s ease,transform .8s ease}.reveal.visible{opacity:1;transform:none}
+  @keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(7px)}}
+  @media(max-width:520px){section{padding:58px 22px}.bow-art{left:-82px;top:2%;width:225px;height:390px}.hero{padding-top:28px}.eyebrow{margin-top:62px}h1{font-size:clamp(68px,21vw,108px);line-height:.8}.count-grid{gap:4px}.num{font-size:25px}}
+</style>
+</head>
+<body>
+<div class="page">
+  <section class="hero">
+    <div class="bow-art" aria-hidden="true">
+      <svg viewBox="0 0 310 520" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="silk" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f8e0e2"/><stop offset=".25" stop-color="#e9b9bf"/><stop offset=".5" stop-color="#c98690"/><stop offset=".72" stop-color="#f1cdd1"/><stop offset="1" stop-color="#d9959e"/></linearGradient>
+          <linearGradient id="silkDark" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#eec7cb"/><stop offset=".5" stop-color="#c47e88"/><stop offset="1" stop-color="#efc6ca"/></linearGradient>
+          <linearGradient id="shine" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".48" stop-color="#fff" stop-opacity=".9"/><stop offset=".62" stop-color="#fff" stop-opacity="0"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+          <radialGradient id="knot"><stop offset="0" stop-color="#f7dfe1"/><stop offset=".55" stop-color="#d997a0"/><stop offset="1" stop-color="#bd747f"/></radialGradient>
+        </defs>
+        <!-- left loop -->
+        <path class="ribbon" d="M143 105 C106 62 42 49 10 72 C-12 89 5 129 39 142 C75 156 105 145 146 124 C121 146 108 166 121 187 C137 212 168 184 181 151 L176 112 Z"/>
+        <path class="shine" d="M18 83 C59 64 101 85 139 111 C91 94 60 91 24 108 Z"/>
+        <!-- right loop -->
+        <path class="ribbon" d="M160 103 C195 59 260 49 294 74 C315 90 300 128 267 141 C230 155 200 145 160 123 C185 145 198 164 184 187 C168 211 137 184 123 151 L127 112 Z"/>
+        <path class="shine" d="M171 109 C218 84 264 67 292 88 C259 82 225 95 173 122 Z"/>
+        <!-- center knot -->
+        <ellipse class="knot" cx="151" cy="118" rx="31" ry="28"/>
+        <path class="shine" d="M129 110 C142 97 159 98 174 111 C157 107 143 114 129 124 Z"/>
+        <!-- long left tail -->
+        <path class="ribbon-dark" d="M134 140 C112 192 90 246 91 316 C92 382 113 430 88 503 L139 474 C151 429 135 380 131 327 C127 266 148 205 163 148 Z"/>
+        <path class="shine" d="M128 159 C111 234 114 310 126 365 C133 402 129 431 118 463 C126 404 115 351 113 305 C110 250 121 203 142 153 Z"/>
+        <!-- long right tail -->
+        <path class="ribbon" d="M162 140 C180 202 201 248 200 315 C199 374 180 426 204 487 L154 459 C143 416 158 373 162 320 C166 262 147 207 133 149 Z"/>
+        <path class="shine" d="M169 159 C186 230 179 298 173 352 C168 397 177 429 188 456 C180 398 191 345 190 303 C188 244 179 197 157 153 Z"/>
+        <!-- loose lower ribbon -->
+        <path class="ribbon" d="M119 137 C99 188 68 210 46 252 C29 285 44 317 72 300 C95 286 106 254 122 220 C135 191 145 166 146 145 Z"/>
+        <path class="shine" d="M115 151 C96 208 64 248 53 283 C75 257 93 224 121 168 Z"/>
+      </svg>
+    </div>
+    <div class="eyebrow">Una noche para recordar</div>
+    <h1><span>Sophia</span><span>Polanco</span></h1>
+    <div class="xv">XV Años</div>
+    <div class="date">Domingo · 04 · Octubre · 2026</div>
+    <div class="hero-note">Nos vemos para celebrar.</div>
+    <div class="scroll">⌄</div>
+  </section>
+
+  <section class="intro reveal"><div class="smallcap">Con mucho cariño</div><p class="script">Hay momentos que se guardan para siempre...</p><p class="copy">Y esta noche quiero compartir uno de los más especiales contigo. Acompáñame a celebrar mis XV años y a hacer de esta fecha un recuerdo inolvidable.</p><div class="divider"></div><p class="script" style="font-size:32px">Será un placer tenerte conmigo.</p></section>
+  <section class="reveal"><div class="smallcap" style="text-align:center">La celebración</div><div class="cards"><div class="card"><div class="label">Fecha</div><div class="value">04<br>Octubre</div></div><div class="card"><div class="label">Hora</div><div class="value">7:00 PM</div></div></div></section>
+  <section class="venue reveal"><div class="smallcap">Lugar</div><div class="venue-name">Ribogarden</div><div class="address">Eje vial Juan Gabriel #2008</div><a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Ribogarden%2C%20Eje%20vial%20Juan%20Gabriel%20%232008">Ver ubicación</a></section>
+
+  <section class="gift reveal"><div class="smallcap">Un detalle especial</div><p class="script" style="font-size:34px">Buzón de Dinero</p><p class="copy">Si deseas obsequiarme algo, habrá un buzón de dinero disponible durante la celebración. Tu presencia es el mejor regalo.</p><div class="divider"></div></section>
+  <section class="count reveal"><div class="smallcap">Falta muy poco</div><p class="script">Cuenta regresiva</p><div class="count-grid"><div class="count-box"><div class="num" id="days">--</div><div class="unit">Días</div></div><div class="count-box"><div class="num" id="hours">--</div><div class="unit">Horas</div></div><div class="count-box"><div class="num" id="mins">--</div><div class="unit">Min</div></div><div class="count-box"><div class="num" id="secs">--</div><div class="unit">Seg</div></div></div></section>
+  <section class="rsvp reveal"><div class="smallcap">Confirma tu asistencia</div><p class="script" style="font-size:34px">¡Te espero!</p><p class="copy">Aquí puedes colocar el número de WhatsApp para que tus invitados confirmen directamente.</p><a class="btn" href="#" onclick="alert('Agrega el número de WhatsApp de confirmaciones en el archivo para activar este botón.');return false;">Confirmar asistencia</a><div class="note">El botón queda listo para conectarlo al WhatsApp que nos indiques.</div></section>
+  <footer>Sophia Polanco · XV Años · 2026</footer>
+</div>
+<button class="music" id="musicBtn" aria-label="Música">♫</button>
+<script>
+const target=new Date(2026,9,4,19,0,0);function updateCountdown(){const diff=target-new Date(),d=document.getElementById('days'),h=document.getElementById('hours'),m=document.getElementById('mins'),s=document.getElementById('secs');if(diff<=0){d.textContent=h.textContent=m.textContent='00';s.textContent='00';return}d.textContent=String(Math.floor(diff/86400000)).padStart(2,'0');h.textContent=String(Math.floor(diff/3600000)%24).padStart(2,'0');m.textContent=String(Math.floor(diff/60000)%60).padStart(2,'0');s.textContent=String(Math.floor(diff/1000)%60).padStart(2,'0')}updateCountdown();setInterval(updateCountdown,1000);
+const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')}),{threshold:.12});document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+const audio=new Audio();audio.loop=true;let playing=false;document.getElementById('musicBtn').addEventListener('click',()=>{if(!audio.src){alert('La invitación ya tiene el botón de música. Cuando elijas la canción, se puede enlazar aquí.');return}if(playing){audio.pause();playing=false;document.getElementById('musicBtn').textContent='♫'}else{audio.play();playing=true;document.getElementById('musicBtn').textContent='Ⅱ'}});
+</script>
+</body>
+</html>
